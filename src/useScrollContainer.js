@@ -30,7 +30,9 @@ const useScrollContainer = () => {
         const distance3 = content1Height - container1Height + distance2
         
         document.body.addEventListener('mousewheel', (e) => {
+          console.log(1, distance)
           distance = distance - e.wheelDeltaY
+          console.log(2, distance)
           /**
            * 1滚动
            * 
@@ -62,6 +64,7 @@ const useScrollContainer = () => {
             scrollTop1 = distance1
             scrollTop2 = distance2 - distance1
             scrollTop3 = distance3 - distance2
+            distance = distance3
           }
          
           container2.current.scrollTop = scrollTop1
