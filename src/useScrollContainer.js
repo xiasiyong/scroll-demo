@@ -28,6 +28,15 @@ const useScrollContainer = () => {
         // 容器3可滚动的最大距离
         // 3000 - 1440 + 1400 = 2960
         const distance3 = content1Height - container1Height + distance2
+        container1.current.addEventListener('mousewheel', e => {
+          e.preventDefault()
+        })
+        container2.current.addEventListener('mousewheel', e => {
+          e.preventDefault()
+        })
+        container3.current.addEventListener('mousewheel', e => {
+          e.preventDefault()
+        })
         
         document.body.addEventListener('mousewheel', (e) => {
           console.log(1, distance)
